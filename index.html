@@ -7,20 +7,32 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #121212;
             font-family: Arial, sans-serif;
         }
         button {
             padding: 10px 20px;
             font-size: 16px;
+            margin: 10px;
+        }
+        h1, h3 {
+            color: #ffffff;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <button onclick="startSelfReplication()">Click me</button>
+
+    <h1>DID YOU WASH YO AAA TODAY?</h1>
+    <h3>You are encouraged to play the video over and over, or turn in loop in your playback settings.</h3>
+    <video controls width="320" height="240" loop autoplay>
+      <source src="vid.mp4" type="video/mp4">
+    </video>
 
     <script>
         function startSelfReplication() {
@@ -40,10 +52,5 @@
             }
         }
     </script>
-    <h1>DID YOU WASH YO AAA TODAY?</h1>
-    <h3>You are encouraged to play the video over and over, or turn in loop in your playback settings.</h3>
-    <video controls width="320" length="240" loop autoplay>
-      <source src="vid.mp4" type="video/mp4">
-    </video
 </body>
 </html>
