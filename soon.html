@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Replicating Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="startSelfReplication()">Click me</button>
+
+    <script>
+        function startSelfReplication() {
+            // Function to create new windows with a delay to mimic self-replication
+            function openNewWindow() {
+                let newWindow = window.open("", "", "width=200,height=100");
+                if (newWindow) {
+                    newWindow.document.write("<p>You are an idiot!</p>");
+                    newWindow.document.write("<button onclick='window.opener.startSelfReplication()'>Click me</button>");
+                    newWindow.document.write("<script>function startSelfReplication() { window.opener.startSelfReplication(); }<\/script>");
+                }
+            }
+
+            // Open multiple windows with a small delay
+            for (let i = 0; i < 5; i++) {
+                setTimeout(openNewWindow, i * 500); // Open a new window every 500ms
+            }
+        }
+    </script>
+</body>
+</html>
