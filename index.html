@@ -14,43 +14,20 @@
             background-color: #121212;
             font-family: Arial, sans-serif;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px;
-        }
-        h1, h3 {
+        h1, h3, a {
             color: #ffffff;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <button onclick="startSelfReplication()">Click me</button>
-
+    <a href="https://r.mtdv.me/mc00f-of">click me</a>
+    
     <h1>DID YOU WASH YO AAA TODAY?</h1>
     <h3>You are encouraged to play the video over and over, or turn in loop in your playback settings.</h3>
     <video controls width="320" height="240" loop autoplay>
-      <source src="vid.mp4" type="video/mp4">
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
-
-    <script>
-        function startSelfReplication() {
-            // Function to create new windows with a delay to mimic self-replication
-            function openNewWindow() {
-                let newWindow = window.open("", "", "width=200,height=100");
-                if (newWindow) {
-                    newWindow.document.write("<p>You are an idiot!</p>");
-                    newWindow.document.write("<button onclick='window.opener.startSelfReplication()'>Click me</button>");
-                    newWindow.document.write("<script>function startSelfReplication() { window.opener.startSelfReplication(); }<\/script>");
-                }
-            }
-
-            // Open multiple windows with a small delay
-            for (let i = 0; i < 5; i++) {
-                setTimeout(openNewWindow, i * 500); // Open a new window every 500ms
-            }
-        }
-    </script>
 </body>
 </html>
