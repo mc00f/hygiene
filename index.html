@@ -29,9 +29,44 @@
             color: #EEEEEE;
             font-size: smaller;
         }
+        <style>
+    /* Reset default margins and padding */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* Style the banner container */
+    #banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #FFA500; /* Set your desired background color */
+        width: 100%; /* Make it stretch the full width */
+    }
+
+    /* Style the banner content */
+    #banner-content {
+        width: 800px; /* Centered and fixed at 800px width */
+        margin: 0 auto; /* Center horizontally */
+        padding: 10px; /* Add some padding for content */
+        border: 1px solid #000; /* Optional: Add a border for visual clarity */
+    }
+
+    /* Adjust main content to avoid overlapping with the banner */
+    #main-content {
+        padding-top: 70px; /* Add padding to avoid content overlap */
+    }
+</style>
+
     </style>
 </head>
 <body>
+    <div id="banner">
+    <div id="banner-content">
+        <h3>Lightmode page will be closed for some bug fixes.</h3>
+    </div>
+</div>
+
     <div class="section">
         <h1>DID YOU WASH YO AAA TODAY?</h1>
         <h3>You are encouraged to play the video over and over or turn it on loop.</h3>
